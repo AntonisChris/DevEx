@@ -1,0 +1,43 @@
+<apex:page controller="KeySalesMetricsController">
+    <div style="width: 100%; display: flex; justify-content: center; align-items: center">
+        <apex:pageBlock title="Key Sales Metrics" mode="edit">
+            <apex:pageBlockSection>
+                <apex:pageBlockSectionItem>
+                    <apex:outputLabel value="Total Number of Leads" for="leads" />
+                    <apex:outputText value="{!numberofleads}" id="leads" />
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem>
+                    <apex:outputLabel value="Total Number of Qualified Leads" for="qualleads" />
+                    <apex:outputText value="{!numberofqualifiedLeads}" id="qualleads" />
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem>
+                    <apex:outputLabel value="Total Number of Deals" for="deals" />
+                    <apex:outputText value="{!numberofopps}" id="deals" />
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem>
+                    <apex:outputLabel value="Total Value of Deals" for="valuedeals" />
+                    <apex:outputText value="{!valueofwonOpps}" id="valuedeals" />
+                </apex:pageBlockSectionItem>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </div>
+    <style>
+        label{
+            width: 250px;
+            display: block;
+            text-align: right;
+            font-size: 13px;
+        }
+
+        tr{
+            padding-bottom: 10px
+        }
+    </style>
+</apex:page>
+
+<!-- 
+    numberofleads
+    numberofqualifiedLeads 
+    numberofopps 
+    valueofwonOpps
+  -->
